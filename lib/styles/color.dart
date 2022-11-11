@@ -6,4 +6,5 @@ class AppColors {
   static const Color gray_2 = Color(0xFF2C2C2E);
   static const Color ellipse = Color(0xFFE0F7FE);
   static const Color iconBlack = Color(0xFF111111);
+  static const Color yellow = Color(0xFFEBD75C);
 }

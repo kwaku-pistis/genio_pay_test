@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:genio_pay_test/screens/basic_plan.dart';
+import 'package:genio_pay_test/screens/international_transfer.dart';
 import 'package:genio_pay_test/styles/color.dart';
 import 'package:genio_pay_test/utils/app_text_styles.dart';
 import 'package:genio_pay_test/utils/dimensions.dart';
@@ -173,7 +174,7 @@ class _RegistrationState extends State<Registration> {
                   onPressed: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (_) => const BasicPlan(),
+                        builder: (_) => const InternationalTransfer(),
                       ),
                     );
                   },
