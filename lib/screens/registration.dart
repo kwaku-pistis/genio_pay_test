@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:genio_pay_test/screens/basic_plan.dart';
 import 'package:genio_pay_test/styles/color.dart';
 import 'package:genio_pay_test/utils/app_text_styles.dart';
 import 'package:genio_pay_test/utils/dimensions.dart';
@@ -169,6 +170,13 @@ class _RegistrationState extends State<Registration> {
                 ),
                 CustomButton(
                   backgroundColor: AppColors.ellipse,
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => const BasicPlan(),
+                      ),
+                    );
+                  },
                   child: Text(
                     'CONTINUE',
                     style: AppTextStyles.bodyText(

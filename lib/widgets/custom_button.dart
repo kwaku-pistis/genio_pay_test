@@ -4,11 +4,13 @@ import 'package:genio_pay_test/utils/dimensions.dart';
 class CustomButton extends StatelessWidget {
   final Widget child;
   final Color backgroundColor;
+  final Function() onPressed;
 
   const CustomButton({
     super.key,
     required this.child,
     required this.backgroundColor,
+    required this.onPressed,
   });
 
   @override
@@ -17,7 +19,7 @@ class CustomButton extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       height: Dimensions.getProportionateScreenHeight(40),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: onPressed,
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(backgroundColor),
           elevation: MaterialStateProperty.all(0),
