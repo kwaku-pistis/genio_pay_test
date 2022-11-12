@@ -18,4 +18,13 @@ class CountryAndTinProvider with ChangeNotifier {
     _countryAndTinList.removeAt(index);
     notifyListeners();
   }
+
+  // list of TIN entered
+  final List<String> _tins = [];
+  List<String> get tins => _tins;
+
+  addTin(String tin) {
+    _tins.add(tin);
+    notifyListeners();
+  }
 }

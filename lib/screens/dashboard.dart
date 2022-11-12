@@ -481,7 +481,7 @@ class _DashboardState extends State<Dashboard> {
       child: SizedBox(
         child: SlidingUpPanel(
           controller: _pc,
-          minHeight: Dimensions.getProportionateScreenHeight(300),
+          minHeight: Dimensions.getProportionateScreenHeight(267),
           maxHeight: Dimensions.getProportionateScreenHeight(585),
           borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(30),
@@ -489,7 +489,10 @@ class _DashboardState extends State<Dashboard> {
           ),
           boxShadow: const [
             BoxShadow(
-                blurRadius: 50, color: Colors.white, offset: Offset(0, -9)),
+              blurRadius: 50,
+              color: Colors.white,
+              offset: Offset(0, -9),
+            ),
           ],
           header: Column(
             mainAxisAlignment: MainAxisAlignment.start,

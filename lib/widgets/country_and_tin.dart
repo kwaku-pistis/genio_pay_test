@@ -1,9 +1,11 @@
 import 'package:country_pickers/country.dart';
 import 'package:country_pickers/country_pickers.dart';
 import 'package:flutter/material.dart';
+import 'package:genio_pay_test/providers/country_and_tin_provider.dart';
 import 'package:genio_pay_test/styles/color.dart';
 import 'package:genio_pay_test/styles/app_text_styles.dart';
 import 'package:genio_pay_test/utils/dimensions.dart';
+import 'package:provider/provider.dart';
 
 class CountryAndTin extends StatefulWidget {
   const CountryAndTin({super.key});
@@ -17,13 +19,18 @@ class _CountryAndTinState extends State<CountryAndTin> {
 
   @override
   Widget build(BuildContext context) {
+    final countryProvider = Provider.of<CountryAndTinProvider>(
+      context,
+      listen: false,
+    );
+
     return SizedBox(
       width: MediaQuery.of(context).size.width,
       child: Column(
         children: [
           Container(
             width: MediaQuery.of(context).size.width,
-            height: Dimensions.getProportionateScreenHeight(56),
+            height: Dimensions.getProportionateScreenHeight(70),
             decoration: BoxDecoration(
               borderRadius: const BorderRadius.all(Radius.circular(8)),
               border: Border.all(
@@ -77,7 +84,7 @@ class _CountryAndTinState extends State<CountryAndTin> {
           ),
           Container(
             width: MediaQuery.of(context).size.width,
-            height: Dimensions.getProportionateScreenHeight(56),
+            height: Dimensions.getProportionateScreenHeight(70),
             decoration: BoxDecoration(
               borderRadius: const BorderRadius.all(Radius.circular(8)),
               border: Border.all(
@@ -103,6 +110,9 @@ class _CountryAndTinState extends State<CountryAndTin> {
               ),
               textInputAction: TextInputAction.done,
               keyboardType: TextInputType.number,
+              onSubmitted: (value) {
+                countryProvider.addTin(value);
+              },
             ),
           ),
         ],

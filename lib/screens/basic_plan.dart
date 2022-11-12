@@ -49,9 +49,10 @@ class _BasicPlanState extends State<BasicPlan> {
                 ),
                 child: const CustomAppBar(),
               ),
-              SizedBox(
-                height: Dimensions.getProportionateScreenHeight(15),
-              ),
+              // SizedBox(
+              //   height: Dimensions.getProportionateScreenHeight(15),
+              // ),
+              const Spacer(),
               Container(
                 margin: EdgeInsets.symmetric(
                   horizontal: Dimensions.getProportionateScreenHeight(24),
@@ -60,15 +61,16 @@ class _BasicPlanState extends State<BasicPlan> {
                   'The more money you send, the better your insurance gets',
                   style: AppTextStyles.bodyText(
                     AppColors.lightBlue,
-                    20,
+                    Dimensions.getProportionateScreenHeight(18),
                     FontWeight.w500,
                   ),
                   textAlign: TextAlign.center,
                 ),
               ),
-              SizedBox(
-                height: Dimensions.getProportionateScreenHeight(7),
-              ),
+              // SizedBox(
+              //   height: Dimensions.getProportionateScreenHeight(7),
+              // ),
+              const Spacer(),
               SizedBox(
                 height: Dimensions.getProportionateScreenHeight(572),
                 child: PageView.builder(
@@ -82,56 +84,56 @@ class _BasicPlanState extends State<BasicPlan> {
                   },
                 ),
               ),
-              SizedBox(
-                height: Dimensions.getProportionateScreenHeight(16),
-              ),
-              Expanded(
-                child: ListView(
-                  children: <Widget>[
-                    _buildCircleIndicator7(),
-                  ]
-                      .map(
-                        (item) => Padding(
-                          padding: EdgeInsets.all(
-                            Dimensions.getProportionateScreenWidth(8),
-                          ),
-                          child: item,
+              // SizedBox(
+              //   height: Dimensions.getProportionateScreenHeight(16),
+              // ),
+              const Spacer(),
+              ListView(
+                shrinkWrap: true,
+                children: <Widget>[
+                  _buildCircleIndicator7(),
+                ]
+                    .map(
+                      (item) => Padding(
+                        padding: EdgeInsets.all(
+                          Dimensions.getProportionateScreenWidth(8),
                         ),
-                      )
-                      .toList(),
-                ),
+                        child: item,
+                      ),
+                    )
+                    .toList(),
               ),
-              Expanded(
-                child: RichText(
-                  text: TextSpan(
-                    text: 'Terms & Conditions apply, click ',
-                    style: AppTextStyles.bodyText(
-                      Colors.black,
-                      12,
-                      FontWeight.w500,
-                    ),
-                    children: [
-                      TextSpan(
-                        text: 'here',
-                        style: AppTextStyles.bodyText(
-                          AppColors.lightBlue,
-                          12,
-                          FontWeight.w500,
-                        ).copyWith(
-                          decoration: TextDecoration.underline,
-                        ),
-                        recognizer: TapGestureRecognizer()
-                          ..onTap = () => {
-                                debugPrint('You clicked on this link'),
-                              },
-                      ),
-                      const TextSpan(
-                        text: ' for more',
-                      ),
-                    ],
+              const Spacer(),
+              RichText(
+                text: TextSpan(
+                  text: 'Terms & Conditions apply, click ',
+                  style: AppTextStyles.bodyText(
+                    Colors.black,
+                    Dimensions.getProportionateScreenHeight(12),
+                    FontWeight.w500,
                   ),
+                  children: [
+                    TextSpan(
+                      text: 'here',
+                      style: AppTextStyles.bodyText(
+                        AppColors.lightBlue,
+                        Dimensions.getProportionateScreenHeight(12),
+                        FontWeight.w500,
+                      ).copyWith(
+                        decoration: TextDecoration.underline,
+                      ),
+                      recognizer: TapGestureRecognizer()
+                        ..onTap = () => {
+                              debugPrint('You clicked on this link'),
+                            },
+                    ),
+                    const TextSpan(
+                      text: ' for more',
+                    ),
+                  ],
                 ),
               ),
+              const Spacer(),
             ],
           ),
         ),
@@ -141,7 +143,7 @@ class _BasicPlanState extends State<BasicPlan> {
 
   _pages() {
     return SizedBox(
-      height: Dimensions.getProportionateScreenHeight(572),
+      height: Dimensions.getProportionateScreenHeight(550),
       child: Stack(
         children: [
           Positioned(
@@ -204,14 +206,11 @@ class _BasicPlanState extends State<BasicPlan> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        // SizedBox(
-        //   height: Dimensions.getProportionateScreenHeight(47.46),
-        // ),
         Text(
           'Basic Plan',
           style: AppTextStyles.bodyText(
             Colors.black,
-            30,
+            Dimensions.getProportionateScreenHeight(18),
             FontWeight.w700,
           ),
         ),
@@ -222,7 +221,7 @@ class _BasicPlanState extends State<BasicPlan> {
           'Send €200 (or more) per month and get coverage for:',
           style: AppTextStyles.bodyText(
             AppColors.lightBlue,
-            20,
+            Dimensions.getProportionateScreenHeight(18),
             FontWeight.w500,
           ),
           textAlign: TextAlign.center,
@@ -258,7 +257,7 @@ class _BasicPlanState extends State<BasicPlan> {
           'In case of death due to an accident:',
           style: AppTextStyles.bodyText(
             AppColors.lightBlue,
-            16,
+            Dimensions.getProportionateScreenHeight(14),
             FontWeight.w500,
           ),
         ),
@@ -283,7 +282,7 @@ class _BasicPlanState extends State<BasicPlan> {
             'OR',
             style: AppTextStyles.bodyText(
               const Color(0xFF5D5D5D),
-              16,
+              Dimensions.getProportionateScreenHeight(14),
               FontWeight.w300,
             ),
             textAlign: TextAlign.left,
@@ -329,7 +328,7 @@ class _BasicPlanState extends State<BasicPlan> {
                     topLeftText,
                     style: AppTextStyles.bodyText(
                       Colors.black,
-                      16,
+                      Dimensions.getProportionateScreenHeight(14),
                       FontWeight.w500,
                     ),
                   ),
@@ -354,7 +353,7 @@ class _BasicPlanState extends State<BasicPlan> {
                         topRightText,
                         style: AppTextStyles.bodyText(
                           const Color(0xFF5D5D5D),
-                          14,
+                          Dimensions.getProportionateScreenHeight(12),
                           FontWeight.w300,
                         ),
                         textAlign: TextAlign.end,
@@ -364,7 +363,7 @@ class _BasicPlanState extends State<BasicPlan> {
                   bottomRightText,
                   style: AppTextStyles.bodyText(
                     Colors.black,
-                    16,
+                    Dimensions.getProportionateScreenHeight(14),
                     FontWeight.w500,
                   ),
                   textAlign: TextAlign.end,
