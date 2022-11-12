@@ -1,21 +1,12 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:carousel_slider/carousel_slider.dart';
-import 'package:country_currency_pickers/country.dart';
-import 'package:country_currency_pickers/currency_picker_dropdown.dart';
-import 'package:country_currency_pickers/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
-import 'package:genio_pay_test/models/transaction_model.dart';
-import 'package:genio_pay_test/screens/basic_plan.dart';
 import 'package:genio_pay_test/screens/dashboard.dart';
 import 'package:genio_pay_test/styles/color.dart';
-import 'package:genio_pay_test/utils/app_text_styles.dart';
 import 'package:genio_pay_test/utils/dimensions.dart';
 import 'package:genio_pay_test/widgets/genio_pay_icon_screen.dart';
-import 'package:genio_pay_test/widgets/transaction_list_card.dart';
-import 'package:sliding_up_panel/sliding_up_panel.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -98,7 +89,8 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
   }
 
   bool onScrollNotification(ScrollNotification notification) {
-    if (notification is UserScrollNotification && notification.metrics.axis == Axis.vertical) {
+    if (notification is UserScrollNotification &&
+        notification.metrics.axis == Axis.vertical) {
       switch (notification.direction) {
         case ScrollDirection.forward:
           _hideBottomBarAnimationController.reverse();

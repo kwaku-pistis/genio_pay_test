@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:genio_pay_test/styles/color.dart';
-import 'package:genio_pay_test/utils/app_text_styles.dart';
+import 'package:genio_pay_test/styles/app_text_styles.dart';
 import 'package:genio_pay_test/utils/dimensions.dart';
 
 class TransferListTileCard extends StatelessWidget {

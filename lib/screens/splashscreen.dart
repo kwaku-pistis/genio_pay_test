@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:genio_pay_test/screens/registration.dart';
+import 'package:genio_pay_test/screens/authentication/registration.dart';
 import 'package:genio_pay_test/styles/color.dart';
 
 class SplashScreen extends StatefulWidget {

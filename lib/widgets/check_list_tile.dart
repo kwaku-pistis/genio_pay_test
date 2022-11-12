@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:genio_pay_test/styles/color.dart';
 import 'package:genio_pay_test/utils/dimensions.dart';
-import 'package:getwidget/components/checkbox/gf_checkbox.dart';
 import 'package:getwidget/getwidget.dart';
 
 class CheckListTile extends StatefulWidget {
@@ -54,7 +53,9 @@ class _CheckListTileState extends State<CheckListTile> {
               ),
             ],
           ),
-          SizedBox(height: Dimensions.getProportionateScreenHeight(17.5),),
+          SizedBox(
+            height: Dimensions.getProportionateScreenHeight(17.5),
+          ),
           Container(
             width: MediaQuery.of(context).size.width,
             height: 0.05,

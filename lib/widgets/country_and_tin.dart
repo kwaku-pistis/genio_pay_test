@@ -2,7 +2,7 @@ import 'package:country_pickers/country.dart';
 import 'package:country_pickers/country_pickers.dart';
 import 'package:flutter/material.dart';
 import 'package:genio_pay_test/styles/color.dart';
-import 'package:genio_pay_test/utils/app_text_styles.dart';
+import 'package:genio_pay_test/styles/app_text_styles.dart';
 import 'package:genio_pay_test/utils/dimensions.dart';
 
 class CountryAndTin extends StatefulWidget {

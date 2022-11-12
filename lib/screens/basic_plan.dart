@@ -1,7 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:genio_pay_test/styles/color.dart';
-import 'package:genio_pay_test/utils/app_text_styles.dart';
+import 'package:genio_pay_test/styles/app_text_styles.dart';
 import 'package:genio_pay_test/utils/dimensions.dart';
 import 'package:genio_pay_test/widgets/app_bar.dart';
 import 'package:page_view_indicators/circle_page_indicator.dart';

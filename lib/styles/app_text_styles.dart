@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class AppTextStyles {
-  static TextStyle titleText(Color color, double fontSize, FontWeight? fontWeight) {
+  static TextStyle titleText(
+      Color color, double fontSize, FontWeight? fontWeight) {
     return TextStyle(
       fontFamily: 'IBM Plex Sans',
       fontSize: fontSize,
@@ -10,7 +11,11 @@ class AppTextStyles {
     );
   }
 
-  static TextStyle bodyText(Color color, double fontSize, FontWeight? fontWeight,) {
+  static TextStyle bodyText(
+    Color color,
+    double fontSize,
+    FontWeight? fontWeight,
+  ) {
     return TextStyle(
       fontFamily: 'IBM Plex Sans',
       fontSize: fontSize,

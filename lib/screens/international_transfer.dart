@@ -3,7 +3,7 @@ import 'package:country_currency_pickers/currency_picker_dropdown.dart';
 import 'package:country_currency_pickers/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:genio_pay_test/styles/color.dart';
-import 'package:genio_pay_test/utils/app_text_styles.dart';
+import 'package:genio_pay_test/styles/app_text_styles.dart';
 import 'package:genio_pay_test/utils/dimensions.dart';
 import 'package:genio_pay_test/widgets/app_bar.dart';
 import 'package:genio_pay_test/widgets/custom_button.dart';
@@ -95,7 +95,8 @@ class _InternationalTransferState extends State<InternationalTransfer> {
                                 ),
                               ),
                               SizedBox(
-                                height: Dimensions.getProportionateScreenHeight(14),
+                                height:
+                                    Dimensions.getProportionateScreenHeight(14),
                               ),
                               CurrencyPickerDropdown(
                                 initialValue: 'USD',
@@ -122,7 +123,8 @@ class _InternationalTransferState extends State<InternationalTransfer> {
                                 ),
                               ),
                               SizedBox(
-                                height: Dimensions.getProportionateScreenHeight(4),
+                                height:
+                                    Dimensions.getProportionateScreenHeight(4),
                               ),
                               Text(
                                 '\$1,000.00',
@@ -154,8 +156,10 @@ class _InternationalTransferState extends State<InternationalTransfer> {
                           ),
                           Expanded(
                             child: Container(
-                              width: Dimensions.getProportionateScreenWidth(270),
-                              height: Dimensions.getProportionateScreenWidth(0.2),
+                              width:
+                                  Dimensions.getProportionateScreenWidth(270),
+                              height:
+                                  Dimensions.getProportionateScreenWidth(0.2),
                               color: AppColors.lightBlue,
                             ),
                           ),
@@ -180,7 +184,8 @@ class _InternationalTransferState extends State<InternationalTransfer> {
                                 ),
                               ),
                               SizedBox(
-                                height: Dimensions.getProportionateScreenHeight(14),
+                                height:
+                                    Dimensions.getProportionateScreenHeight(14),
                               ),
                               CurrencyPickerDropdown(
                                 initialValue: 'USD',

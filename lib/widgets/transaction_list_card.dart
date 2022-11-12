@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:genio_pay_test/models/transaction_model.dart';
 import 'package:genio_pay_test/styles/color.dart';
-import 'package:genio_pay_test/utils/app_text_styles.dart';
+import 'package:genio_pay_test/styles/app_text_styles.dart';
 import 'package:genio_pay_test/utils/dimensions.dart';
 
 class TransactionListCard extends StatelessWidget {
@@ -95,7 +95,9 @@ class TransactionListCard extends StatelessWidget {
               Text(
                 transaction.status,
                 style: AppTextStyles.bodyText(
-                  transaction.status == 'Completed' ? AppColors.green : AppColors.orange,
+                  transaction.status == 'Completed'
+                      ? AppColors.green
+                      : AppColors.orange,
                   12,
                   FontWeight.w400,
                 ),

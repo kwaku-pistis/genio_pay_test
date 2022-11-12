@@ -6,7 +6,7 @@ import 'package:genio_pay_test/models/transaction_model.dart';
 import 'package:genio_pay_test/screens/basic_plan.dart';
 import 'package:genio_pay_test/screens/international_transfer.dart';
 import 'package:genio_pay_test/styles/color.dart';
-import 'package:genio_pay_test/utils/app_text_styles.dart';
+import 'package:genio_pay_test/styles/app_text_styles.dart';
 import 'package:genio_pay_test/utils/dimensions.dart';
 import 'package:genio_pay_test/widgets/transaction_list_card.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
@@ -115,7 +115,8 @@ class _DashboardState extends State<Dashboard> {
                               decoration: const BoxDecoration(
                                 shape: BoxShape.circle,
                                 image: DecorationImage(
-                                  image: AssetImage('assets/images/profile_pic.png'),
+                                  image: AssetImage(
+                                      'assets/images/profile_pic.png'),
                                 ),
                               ),
                               alignment: Alignment.topCenter,
@@ -288,7 +289,8 @@ class _DashboardState extends State<Dashboard> {
                                   onTap: () {
                                     Navigator.of(context).push(
                                       MaterialPageRoute(
-                                        builder: (_) => const InternationalTransfer(),
+                                        builder: (_) =>
+                                            const InternationalTransfer(),
                                       ),
                                     );
                                   },
@@ -310,7 +312,9 @@ class _DashboardState extends State<Dashboard> {
                                   ),
                                 ),
                                 SizedBox(
-                                  height: Dimensions.getProportionateScreenHeight(5),
+                                  height:
+                                      Dimensions.getProportionateScreenHeight(
+                                          5),
                                 ),
                                 Text(
                                   'Pay Out',
@@ -341,7 +345,9 @@ class _DashboardState extends State<Dashboard> {
                                   ),
                                 ),
                                 SizedBox(
-                                  height: Dimensions.getProportionateScreenHeight(5),
+                                  height:
+                                      Dimensions.getProportionateScreenHeight(
+                                          5),
                                 ),
                                 Text(
                                   'Pay In',
@@ -359,7 +365,8 @@ class _DashboardState extends State<Dashboard> {
                                   onTap: () {
                                     Navigator.of(context).push(
                                       MaterialPageRoute(
-                                        builder: (_) => const InternationalTransfer(),
+                                        builder: (_) =>
+                                            const InternationalTransfer(),
                                       ),
                                     );
                                   },
@@ -381,7 +388,9 @@ class _DashboardState extends State<Dashboard> {
                                   ),
                                 ),
                                 SizedBox(
-                                  height: Dimensions.getProportionateScreenHeight(5),
+                                  height:
+                                      Dimensions.getProportionateScreenHeight(
+                                          5),
                                 ),
                                 Text(
                                   'Exchange',
@@ -421,7 +430,9 @@ class _DashboardState extends State<Dashboard> {
                                   ),
                                 ),
                                 SizedBox(
-                                  height: Dimensions.getProportionateScreenHeight(5),
+                                  height:
+                                      Dimensions.getProportionateScreenHeight(
+                                          5),
                                 ),
                                 Text(
                                   'More',
@@ -477,7 +488,8 @@ class _DashboardState extends State<Dashboard> {
             topRight: Radius.circular(30),
           ),
           boxShadow: const [
-            BoxShadow(blurRadius: 50, color: Colors.white, offset: Offset(0, -9)),
+            BoxShadow(
+                blurRadius: 50, color: Colors.white, offset: Offset(0, -9)),
           ],
           header: Column(
             mainAxisAlignment: MainAxisAlignment.start,

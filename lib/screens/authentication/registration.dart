@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:genio_pay_test/providers/country_and_tin_provider.dart';
-import 'package:genio_pay_test/screens/proof_identity.dart';
+import 'package:genio_pay_test/screens/authentication/proof_identity.dart';
 import 'package:genio_pay_test/styles/color.dart';
-import 'package:genio_pay_test/utils/app_text_styles.dart';
+import 'package:genio_pay_test/styles/app_text_styles.dart';
 import 'package:genio_pay_test/utils/dimensions.dart';
 import 'package:genio_pay_test/widgets/app_bar.dart';
 import 'package:genio_pay_test/widgets/check_list_tile.dart';
@@ -18,7 +18,6 @@ class Registration extends StatefulWidget {
 }
 
 class _RegistrationState extends State<Registration> {
-
   @override
   Widget build(BuildContext context) {
     Dimensions.init(context);
@@ -112,8 +111,10 @@ class _RegistrationState extends State<Registration> {
                             alignment: Alignment.centerRight,
                             child: Image.asset(
                               'assets/icons/delete.png',
-                              width: Dimensions.getProportionateScreenWidth(12.8),
-                              height: Dimensions.getProportionateScreenHeight(13.2),
+                              width:
+                                  Dimensions.getProportionateScreenWidth(12.8),
+                              height:
+                                  Dimensions.getProportionateScreenHeight(13.2),
                             ),
                           ),
                         ),
@@ -185,7 +186,8 @@ class _RegistrationState extends State<Registration> {
                           ),
                         ),
                         const TextSpan(
-                          text: 'and that I have designated the United States as ,one of the countries in the above section.',
+                          text:
+                              'and that I have designated the United States as ,one of the countries in the above section.',
                         )
                       ],
                     ),
@@ -205,7 +207,8 @@ class _RegistrationState extends State<Registration> {
                       ),
                       children: [
                         TextSpan(
-                          text: 'that I am not a tax resident of the United States.',
+                          text:
+                              'that I am not a tax resident of the United States.',
                           style: AppTextStyles.bodyText(
                             AppColors.lightBlue,
                             12,

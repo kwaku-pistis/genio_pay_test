@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:genio_pay_test/providers/country_and_tin_provider.dart';
-import 'package:genio_pay_test/screens/registration.dart';
+import 'package:genio_pay_test/screens/authentication/registration.dart';
 import 'package:genio_pay_test/widgets/custom_button.dart';
 import 'package:provider/provider.dart';
 
