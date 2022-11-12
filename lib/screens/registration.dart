@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:genio_pay_test/screens/basic_plan.dart';
+import 'package:genio_pay_test/providers/country_and_tin_provider.dart';
 import 'package:genio_pay_test/screens/international_transfer.dart';
 import 'package:genio_pay_test/styles/color.dart';
 import 'package:genio_pay_test/utils/app_text_styles.dart';
@@ -8,6 +8,7 @@ import 'package:genio_pay_test/widgets/app_bar.dart';
 import 'package:genio_pay_test/widgets/check_list_tile.dart';
 import 'package:genio_pay_test/widgets/country_and_tin.dart';
 import 'package:genio_pay_test/widgets/custom_button.dart';
+import 'package:provider/provider.dart';
 
 class Registration extends StatefulWidget {
   const Registration({super.key});
@@ -17,9 +18,14 @@ class Registration extends StatefulWidget {
 }
 
 class _RegistrationState extends State<Registration> {
+
   @override
   Widget build(BuildContext context) {
     Dimensions.init(context);
+    final countryProvider = Provider.of<CountryAndTinProvider>(
+      context,
+      listen: false,
+    );
 
     return Scaffold(
       body: SafeArea(
@@ -85,7 +91,71 @@ class _RegistrationState extends State<Registration> {
                 SizedBox(
                   height: Dimensions.getProportionateScreenHeight(24),
                 ),
-                const CountryAndTin(),
+                ListView.builder(
+                  shrinkWrap: true,
+                  itemCount: countryProvider.countryAndTin.length,
+                  itemBuilder: (context, index) {
+                    return Column(
+                      children: [
+                        countryProvider.countryAndTin[index],
+                        SizedBox(
+                          height: Dimensions.getProportionateScreenHeight(8),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            countryProvider.deleteFronCountryList(index);
+                            debugPrint('$index');
+                            setState(() {});
+                          },
+                          child: Container(
+                            width: MediaQuery.of(context).size.width,
+                            alignment: Alignment.centerRight,
+                            child: Image.asset(
+                              'assets/icons/delete.png',
+                              width: Dimensions.getProportionateScreenWidth(12.8),
+                              height: Dimensions.getProportionateScreenHeight(13.2),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: Dimensions.getProportionateScreenHeight(17.6),
+                        ),
+                      ],
+                    );
+                  },
+                ),
+                GestureDetector(
+                  onTap: () {
+                    countryProvider.addCountryAndTin(
+                      const CountryAndTin(),
+                    );
+                    setState(() {});
+                  },
+                  child: Container(
+                    width: Dimensions.getProportionateScreenWidth(40),
+                    height: Dimensions.getProportionateScreenWidth(40),
+                    decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: AppColors.ellipse,
+                    ),
+                    child: Icon(
+                      Icons.add,
+                      size: Dimensions.getProportionateScreenWidth(20),
+                      color: AppColors.iconBlack,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: Dimensions.getProportionateScreenHeight(8),
+                ),
+                Text(
+                  'Add another country',
+                  style: AppTextStyles.bodyText(
+                    AppColors.gray_2,
+                    14,
+                    FontWeight.w300,
+                  ),
+                ),
                 SizedBox(
                   height: Dimensions.getProportionateScreenHeight(40),
                 ),

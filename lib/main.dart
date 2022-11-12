@@ -1,10 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:genio_pay_test/screens/home.dart';
-import 'package:genio_pay_test/screens/proof_identity.dart';
+import 'package:genio_pay_test/providers/country_and_tin_provider.dart';
 import 'package:genio_pay_test/screens/registration.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (_) => CountryAndTinProvider(),
+        ),
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -18,8 +27,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const ProofIdentity(),
+      home: const Registration(),
     );
   }
 }
-

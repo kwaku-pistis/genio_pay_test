@@ -1,11 +1,11 @@
 import 'package:country_pickers/country.dart';
-import 'package:country_pickers/country_picker_dropdown.dart';
 import 'package:country_pickers/country_pickers.dart';
 import 'package:flutter/material.dart';
+import 'package:genio_pay_test/providers/country_and_tin_provider.dart';
 import 'package:genio_pay_test/styles/color.dart';
 import 'package:genio_pay_test/utils/app_text_styles.dart';
 import 'package:genio_pay_test/utils/dimensions.dart';
-import 'package:genio_pay_test/widgets/check_list_tile.dart';
+import 'package:provider/provider.dart';
 
 class CountryAndTin extends StatefulWidget {
   const CountryAndTin({super.key});
@@ -15,10 +15,15 @@ class CountryAndTin extends StatefulWidget {
 }
 
 class _CountryAndTinState extends State<CountryAndTin> {
-  String countryName = 'Brazil';
+  String countryName = 'Ghana';
 
   @override
   Widget build(BuildContext context) {
+    final countryProvider = Provider.of<CountryAndTinProvider>(
+      context,
+      listen: false,
+    );
+
     return SizedBox(
       width: MediaQuery.of(context).size.width,
       child: Column(
@@ -46,7 +51,6 @@ class _CountryAndTinState extends State<CountryAndTin> {
               leading: CountryPickerDropdown(
                 initialValue: 'GH',
                 itemBuilder: _buildDropdownItem,
-                // itemFilter:  ['AR', 'DE', 'GB', 'CN'].contains(c.isoCode),
                 priorityList: [
                   CountryPickerUtils.getCountryByName('Ghana'),
                   CountryPickerUtils.getCountryByName('Brazil'),
@@ -106,45 +110,6 @@ class _CountryAndTinState extends State<CountryAndTin> {
               ),
               textInputAction: TextInputAction.done,
               keyboardType: TextInputType.number,
-            ),
-          ),
-          SizedBox(
-            height: Dimensions.getProportionateScreenHeight(8),
-          ),
-          Container(
-            width: MediaQuery.of(context).size.width,
-            alignment: Alignment.centerRight,
-            child: Icon(
-              Icons.delete_forever_outlined,
-              color: AppColors.lightBlue,
-              size: Dimensions.getProportionateScreenHeight(17),
-            ),
-          ),
-          SizedBox(
-            height: Dimensions.getProportionateScreenHeight(17.6),
-          ),
-          Container(
-            width: Dimensions.getProportionateScreenWidth(40),
-            height: Dimensions.getProportionateScreenWidth(40),
-            decoration: const BoxDecoration(
-              shape: BoxShape.circle,
-              color: AppColors.ellipse,
-            ),
-            child: Icon(
-              Icons.add,
-              size: Dimensions.getProportionateScreenWidth(20),
-              color: AppColors.iconBlack,
-            ),
-          ),
-          SizedBox(
-            height: Dimensions.getProportionateScreenHeight(8),
-          ),
-          Text(
-            'Add another country',
-            style: AppTextStyles.bodyText(
-              AppColors.gray_2,
-              14,
-              FontWeight.w300,
             ),
           ),
         ],
