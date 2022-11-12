@@ -1,11 +1,9 @@
 import 'package:country_pickers/country.dart';
 import 'package:country_pickers/country_pickers.dart';
 import 'package:flutter/material.dart';
-import 'package:genio_pay_test/providers/country_and_tin_provider.dart';
 import 'package:genio_pay_test/styles/color.dart';
 import 'package:genio_pay_test/utils/app_text_styles.dart';
 import 'package:genio_pay_test/utils/dimensions.dart';
-import 'package:provider/provider.dart';
 
 class CountryAndTin extends StatefulWidget {
   const CountryAndTin({super.key});
@@ -19,11 +17,6 @@ class _CountryAndTinState extends State<CountryAndTin> {
 
   @override
   Widget build(BuildContext context) {
-    final countryProvider = Provider.of<CountryAndTinProvider>(
-      context,
-      listen: false,
-    );
-
     return SizedBox(
       width: MediaQuery.of(context).size.width,
       child: Column(

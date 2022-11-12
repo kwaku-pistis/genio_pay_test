@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:genio_pay_test/utils/dimensions.dart';
 
 class CustomButton extends StatelessWidget {
-  final Widget child;
-  final Color backgroundColor;
-  final Function() onPressed;
+  final Widget? child;
+  final Color? backgroundColor;
+  final Function()? onPressed;
 
   const CustomButton({
     super.key,
-    required this.child,
-    required this.backgroundColor,
-    required this.onPressed,
+    this.child,
+    this.backgroundColor,
+    this.onPressed,
   });
 
   @override
