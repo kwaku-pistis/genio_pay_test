@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:genio_pay_test/screens/home.dart';
+import 'package:genio_pay_test/screens/proof_identity.dart';
 import 'package:genio_pay_test/screens/registration.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Home(),
+      home: const ProofIdentity(),
     );
   }
 }

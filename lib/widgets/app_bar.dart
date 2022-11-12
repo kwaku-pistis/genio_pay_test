@@ -23,10 +23,10 @@ class CustomAppBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           leadingIcon ??
-              Icon(
-                Icons.arrow_back,
-                color: Colors.black,
-                size: Dimensions.getProportionateScreenWidth(17.5) 
+              Image.asset(
+                'assets/icons/back_icon.png',
+                width: Dimensions.getProportionateScreenWidth(17.5),
+                height: Dimensions.getProportionateScreenHeight(11.25),
               ),
           Text(
             title ?? "",
@@ -37,12 +37,7 @@ class CustomAppBar extends StatelessWidget {
               color: Color(0xff001B21),
             ),
           ),
-          trailing ??
-              Icon(
-                Icons.help_outline,
-                color: Colors.black,
-                size: Dimensions.getProportionateScreenWidth(13.6) 
-              ),
+          trailing ?? Icon(Icons.help_outline, color: Colors.black, size: Dimensions.getProportionateScreenWidth(13.6)),
         ],
       ),
     );
