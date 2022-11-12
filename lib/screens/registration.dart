@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:genio_pay_test/providers/country_and_tin_provider.dart';
-import 'package:genio_pay_test/screens/international_transfer.dart';
+import 'package:genio_pay_test/screens/proof_identity.dart';
 import 'package:genio_pay_test/styles/color.dart';
 import 'package:genio_pay_test/utils/app_text_styles.dart';
 import 'package:genio_pay_test/utils/dimensions.dart';
@@ -244,7 +244,7 @@ class _RegistrationState extends State<Registration> {
                   onPressed: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (_) => const InternationalTransfer(),
+                        builder: (_) => const ProofIdentity(),
                       ),
                     );
                   },

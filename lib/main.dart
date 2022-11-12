@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:genio_pay_test/providers/country_and_tin_provider.dart';
 import 'package:genio_pay_test/screens/registration.dart';
+import 'package:genio_pay_test/screens/splashscreen.dart';
+import 'package:genio_pay_test/styles/color.dart';
+import 'package:genio_pay_test/utils/app_text_styles.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -27,7 +30,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Registration(),
+      home: const SplashScreen(),
     );
   }
 }

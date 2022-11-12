@@ -149,16 +149,9 @@ class _BasicPlanState extends State<BasicPlan> {
             child: Container(
               width: MediaQuery.of(context).size.width,
               height: Dimensions.getProportionateScreenHeight(532.46),
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.white,
-                borderRadius: const BorderRadius.all(Radius.circular(20)),
-                boxShadow: [
-                  BoxShadow(
-                    color: AppColors.gray_2.withOpacity(0.4),
-                    offset: const Offset(0, 10),
-                    blurRadius: 30,
-                  ),
-                ],
+                borderRadius: BorderRadius.all(Radius.circular(20)),
               ),
               padding: EdgeInsets.symmetric(
                 horizontal: Dimensions.getProportionateScreenHeight(24),
@@ -209,10 +202,11 @@ class _BasicPlanState extends State<BasicPlan> {
 
   Widget _details() {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        SizedBox(
-          height: Dimensions.getProportionateScreenHeight(47.46),
-        ),
+        // SizedBox(
+        //   height: Dimensions.getProportionateScreenHeight(47.46),
+        // ),
         Text(
           'Basic Plan',
           style: AppTextStyles.bodyText(

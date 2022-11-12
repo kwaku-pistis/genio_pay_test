@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:genio_pay_test/screens/home.dart';
 import 'package:genio_pay_test/styles/color.dart';
 import 'package:genio_pay_test/utils/app_text_styles.dart';
 import 'package:genio_pay_test/utils/dimensions.dart';
@@ -231,7 +232,11 @@ class ProofIdentity extends StatelessWidget {
                       CustomButton(
                         backgroundColor: AppColors.yellow,
                         onPressed: () {
-                          Navigator.pop(context);
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (_) => const Home(),
+                            ),
+                          );
                         },
                         child: Text(
                           'CONTINUE',

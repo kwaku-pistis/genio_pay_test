@@ -22,12 +22,15 @@ class CustomAppBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          leadingIcon ??
+          GestureDetector(
+            onTap: () => Navigator.pop(context),
+            child: leadingIcon ??
               Image.asset(
                 'assets/icons/back_icon.png',
                 width: Dimensions.getProportionateScreenWidth(17.5),
                 height: Dimensions.getProportionateScreenHeight(11.25),
               ),
+          ),
           Text(
             title ?? "",
             style: const TextStyle(
