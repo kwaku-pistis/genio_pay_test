@@ -42,8 +42,8 @@ void main() {
         ),
       ),
     );
-    final _widget = find.byType(ListView);
-    expect(_widget, findsOneWidget);
+    final widget = find.byType(ListView);
+    expect(widget, findsOneWidget);
   });
 
   testWidgets('find continue button', (WidgetTester tester) async {
