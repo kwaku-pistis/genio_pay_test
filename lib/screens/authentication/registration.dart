@@ -31,7 +31,6 @@ class _RegistrationState extends State<Registration> {
         child: SingleChildScrollView(
           child: Container(
             width: MediaQuery.of(context).size.width,
-            // height: MediaQuery.of(context).size.height,
             color: AppColors.backgroundWhite,
             padding: EdgeInsets.symmetric(
               horizontal: Dimensions.getProportionateScreenWidth(24),
