@@ -7,4 +7,7 @@ class AppColors {
   static const Color ellipse = Color(0xFFE0F7FE);
   static const Color iconBlack = Color(0xFF111111);
   static const Color yellow = Color(0xFFEBD75C);
+  static const Color green = Color(0xFF15CF74);
+  static const Color orange = Color(0xFFFB923C);
+  static const Color textGrey = Color(0xFF8E8E8E);
 }

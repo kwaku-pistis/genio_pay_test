@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:genio_pay_test/screens/home.dart';
 import 'package:genio_pay_test/screens/registration.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Registration(),
+      home: const Home(),
     );
   }
 }

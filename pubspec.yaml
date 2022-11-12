@@ -32,6 +32,11 @@ dependencies:
   getwidget: ^3.0.1
   page_view_indicators: ^2.0.0
   country_currency_pickers: ^2.0.0
+  animated_bottom_navigation_bar: ^1.1.0
+  auto_size_text: ^3.0.0
+  circular_reveal_animation: ^2.0.1
+  sliding_up_panel: ^2.0.0+1
+  carousel_slider: ^4.1.1
 
 dev_dependencies:
   flutter_test:
