@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.genio_pay_test">
    <application
-        android:label="genio_pay_test"
+        android:label="GenioPay"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
